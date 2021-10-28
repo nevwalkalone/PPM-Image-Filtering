@@ -1,14 +1,15 @@
 #pragma once
 #include "Image.h"
+
 using namespace image;
 
+class Filter {
 
-
-virtual class Filter {
 protected:
 	Filter() {
 		
 	}
+
 public:
 	virtual Image operator <<(const Image& image) = 0;
 

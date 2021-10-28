@@ -16,20 +16,20 @@ namespace math
 	
 	//------------------------------------ class Array2D ------------------------------------------------
 
-		/*! It is the class that represents a generic data container for a two-dimensional array of data.
-		 *
-		 * It holds the actual buffer of the data values and provides methods for accessing them,
-		 * either as individual tokens or as a memory block.
-		 *
-		 */
+	/*! It is the class that represents a generic data container for a two-dimensional array of data.
+	 * It holds the actual buffer of the data values and provides methods for accessing them,
+	 * either as individual tokens or as a memory block.
+	 *
+	 */
 	template <typename T>
 	class Array2D
 	{
+
 	protected:
 		std::vector<T> buffer;                       //! Holds the array data.
 
 		unsigned int width, 						 //! The width of the array (in pixels)
-			height;		                 //! The height of the array (in pixels)
+					 height;						 //! The height of the array (in pixels)
 
 	public:
 		/*! Returns the width of the array
@@ -87,12 +87,8 @@ namespace math
 		 *
 		 * \param src is the source array to replicate in this object.
 		 */
-
-
 		Array2D(const Array2D& src);
 		
-		
-
 		/*! The Array2D destructor.
 		 */
 		~Array2D();
@@ -108,7 +104,7 @@ namespace math
 } //namespace math
 
 /* Do not modify the current file to provide the implementation for the 2D array class. Instead, use the array2d.hpp file to
-   provide the difinitions of the class member functions:
+   provide the definitions of the class member functions:
 */
 #include "array2d.hpp"
 

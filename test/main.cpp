@@ -1,8 +1,3 @@
-
-/*Epameinwndas Iwannou-3140059
-
-
-*/
 #include "FilterLinear.h"
 #include "FilterGamma.h"
 #include "image.h"

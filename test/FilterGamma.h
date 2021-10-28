@@ -3,10 +3,11 @@
 #include "vec3.h"
 #include <math.h>
 
-class FilterGamma :public Filter {
+class FilterGamma :public virtual Filter {
+
 private:
 	
-	float g;
+	float g = 0.0f;
 	
 public:
 	//FilterGamma default constructor

@@ -4,11 +4,12 @@
 #include <iostream>
 
 
-
 class FilterLinear:public Filter {
+
 private:
 	Color a;
 	Color c;
+
 public:
 	//FilterLinear default constructor
 	FilterLinear() :Filter() {}
