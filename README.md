@@ -8,7 +8,7 @@ The objective of this assignment was to create an image-filtering application in
 
 For a full overview it is highly suggested that you read:
 
-- [Project Assignment](), that contains all the details about how the image filtering and all the concepts mentioned above must be implemented.
+- [Project Assignment](assignment/CPP2019_Assignment.pdf), that contains all the details about how the image filtering and all the concepts mentioned above must be implemented.
 
 ## Environment
 
