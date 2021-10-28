@@ -4,7 +4,7 @@
 
 using namespace std;
 
-/* Implementing array2d's methods. Comments regarding each method
+/*Implementing array2d's methods. Comments regarding each method
 * can be found in array2d.h
 */
 
