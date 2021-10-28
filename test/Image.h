@@ -53,8 +53,8 @@ namespace image {
 				Color v(*(array + i), *(array + i + 1), *(array + i + 2));
 				buffer.push_back(v);
 			}
-			//deleting the object that
-			//was dynamically created in ReadPPM
+
+			// deleting the object that was dynamically created in ReadPPM
 			delete[] array;
 			return true;
 		}

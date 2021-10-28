@@ -6,7 +6,7 @@
 using namespace std;
 
 /*
-Comments can be found in ppm.h
+Comments regarding these 2 functions can be found in ppm.h
 */
 
 namespace image {
@@ -20,31 +20,30 @@ namespace image {
 			cerr << "Could not open " << filename << endl;
 			return nullptr;
 		}
+
 		string word;
 		file >> word;
-	
 		if (!word._Equal("P6")) {
 			cerr << "Could not process "<< filename<< ". Only P6 Format allowed." << endl;
 			return nullptr;
 		}
+
 		file >> word;
 		for (int i = 0; i < word.length(); i++) {
 			if (!isdigit(word[i])) {
-				cerr << " Could not process "<< filename << ". Width must be numerical." << endl;
+				cerr << "Could not process "<< filename << ". Width must be numerical." << endl;
 				return nullptr;
 			}
 		}
 		
-
 		*w = stoi(word);
 		file >> word;
 		for (int i = 0; i < word.length(); i++) {
 			if (!isdigit(word[i])) {
-				cerr << "Height must be numerical" << endl;
+				cerr << "Could not process " << filename << "Height must be numerical." << endl;
 				return nullptr;
 			}
 		}
-		
 		
 		*h = stoi(word);
 		file >> word;
@@ -60,20 +59,30 @@ namespace image {
 			cerr << "Max value for each pixel must be between 0 and 255" << endl;
 			return nullptr;
 		}
+
 		// ignoring the /n character
 		file.ignore(1);
 
-		size_t size = 3 * (*w) * (*h);
+	
+		int size = 3 * (*w) * (*h);
+
 		unsigned char* buffer = new unsigned char[size];
+
+		// reading all data into the buffer
 		file.read((char*)buffer, size);
+		file.close();
+
+		// memory must be released from the caller
 		float* pointer = new float[size];
 
+		// values must be in the range [0,1], tha'ts why we divide by 255
 		for (int i = 0; i < size; i++) {
 			pointer[i] = buffer[i] / 255.f;
 		}
-		
+
+		// buffer no longer needed, releasing memory
 		delete[] buffer;
-		file.close();
+
 		return pointer;
 	}
 
@@ -92,13 +101,15 @@ namespace image {
 			return false;
 		}
 
+		// Creating PPM header which contains the width, height
+		// and the maximum value for a pixel (255) in this order.
 		file << "P6" << "\n" << w << "\n" << h << "\n" << 255<<"\n";
-		size_t size = 3 * w * h;
+		int size = 3 * w * h;
 		int val;
 		
-
+		// writing data to the file, we multiply by 255
+		// because the values must be in the [0,255] range
 		for (int i = 0; i < size; i++) {
-			
 			val = data[i] * 255;
 			file.put(val);
 		}
