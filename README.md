@@ -50,7 +50,7 @@ In the examples pictured below, these [images](https://drive.google.com/file/d/1
    > filter -f gamma 2.0 -f linear -1 -1 -1 1 1 1 Image01.ppm
    ```
 
-   ![enall](images/gamma-linear.png)
+   ![enall](img/gamma-linear.png)
 
 2. Consecutive gamma filters that cancel each other.
 
@@ -58,7 +58,7 @@ In the examples pictured below, these [images](https://drive.google.com/file/d/1
    > filter -f gamma 2.0 -f gamma 0.5 Image01.ppm
    ```
 
-   ![enall](images/gamma-gamma.png)
+   ![enall](img/gamma-gamma.png)
 
 3. Doubles the brightness.
 
@@ -66,7 +66,7 @@ In the examples pictured below, these [images](https://drive.google.com/file/d/1
    > filter -f linear 2 2 2 0 0 0 Image01.ppm
    ```
 
-   ![enall](images/linear.png)
+   ![enall](img/linear.png)
 
 4. Applies 3 filters that alter the colors of the image.
 
@@ -74,4 +74,4 @@ In the examples pictured below, these [images](https://drive.google.com/file/d/1
    > filter -f gamma 0.7 -f linear 1 0.8 0.3 0.1 0.1 0.3 -f gamma 1.2 Image02.ppm
    ```
 
-   ![enall](images/gamma-linear-gamma.png)
+   ![enall](img/gamma-linear-gamma.png)
