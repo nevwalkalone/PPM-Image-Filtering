@@ -75,3 +75,9 @@ In the examples pictured below, these [images](https://drive.google.com/file/d/1
    ```
 
    ![enall](img/gamma-linear-gamma.png)
+   
+## Contributions
+
+If you want to contribute, you can always create a pull request or open an issue.
+
+
