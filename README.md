@@ -80,4 +80,8 @@ In the examples pictured below, these [images](https://drive.google.com/file/d/1
 
 If you want to contribute, you can always create a pull request or open an issue.
 
+## License
+
+[MIT](LICENSE)
+
 
