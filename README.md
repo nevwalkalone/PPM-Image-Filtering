@@ -25,9 +25,9 @@ For a full overview it is highly suggested that you read:
    git clone https://github.com/nevwalkalone/PPM-Image-Filtering.git
    ```
 
-2. **Open** ppm_filter.sln in Visual Studio 2019,
-3. **Build** both ppm and test projects,
-4. **Set** test project as the Startup Project.
+2. **Open** `ppm_filter.sln` in Visual Studio 2019
+3. **Build** both ppm and test projects
+4. **Set** test project as the Startup Project
 5. **Place** the image you want to filter, inside the test folder.
 
 ### <ins>Filtering</ins>
