@@ -38,7 +38,7 @@ namespace math {
 		template <typename T>
 		T& Array2D<T>::operator () (unsigned int x, unsigned int y) {
 			//if ((x >= 0) && (x < height) && ((y >= 0) && (y < width))) {
-				return buffer[x * width + y];
+			return buffer[x * width + y];
 			//}
 		}
 		

@@ -1,4 +1,4 @@
-# PPM-Image-Filtering
+# PPM Image Filtering
 
 This project was completed for the C++ course of the [Department of Computer Science of the Athens University of Economics and Business](https://www.dept.aueb.gr/el/cs), during the Fall semester of 2019-2020.
 
@@ -19,7 +19,7 @@ For a full overview it is highly suggested that you read:
 
 ### <ins>Setup</ins>
 
-1. **Clone** repository,
+1. **Clone** repository
 
    ```console
    git clone https://github.com/nevwalkalone/PPM-Image-Filtering.git
@@ -28,15 +28,15 @@ For a full overview it is highly suggested that you read:
 2. **Open** `ppm_filter.sln` in Visual Studio 2019
 3. **Build** both ppm and test projects
 4. **Set** test project as the Startup Project
-5. **Place** the image you want to filter, inside the test folder.
+5. **Place** the image you want to filter, inside the test folder
 
 ### <ins>Filtering</ins>
 
 - There are 2 available filters, **linear** and **gamma**. For more details about these 2 filters check the assignment. Gamma filter takes 1 parameter, while linear takes 6.
 
-- The filter we want to apply (with its parameters), as well as the name of the Image, must be given as command arguments in test project, **Properties>Configuration Properties>Debugging>Command Arguments**.
+- The filter we want to apply (with its parameters), as well as the name of the image, must be given as command arguments in test project, **Properties>Configuration Properties>Debugging>Command Arguments**. Check the Filter Examples below, to understand the filter format.
 
-- After specifying the filters you want to apply and the name of the image in the command arguments section, **Run the application**.
+- After specifying the filter and the name of the image in the command arguments section, **Run the application**.
 
 - The filtered image will be created inside the test folder, called "filtered\_ <image_name>.ppm".
 
@@ -44,7 +44,7 @@ For a full overview it is highly suggested that you read:
 
 In the examples pictured below, these [images](https://drive.google.com/file/d/1SxqzgI6JMyyR08FwlrOOSCOoM13CMs0H/view?usp=sharing) were used.
 
-1. Combination of gamma and linear filters that produce a color negative.
+1. Combination of gamma and linear filters that produce a color negative
 
    ```console
    > filter -f gamma 2.0 -f linear -1 -1 -1 1 1 1 Image01.ppm
@@ -52,7 +52,7 @@ In the examples pictured below, these [images](https://drive.google.com/file/d/1
 
    ![enall](img/gamma-linear.png)
 
-2. Consecutive gamma filters that cancel each other.
+2. Consecutive gamma filters that cancel each other
 
    ```console
    > filter -f gamma 2.0 -f gamma 0.5 Image01.ppm
@@ -60,7 +60,7 @@ In the examples pictured below, these [images](https://drive.google.com/file/d/1
 
    ![enall](img/gamma-gamma.png)
 
-3. Doubles the brightness.
+3. Doubles the brightness
 
    ```console
    > filter -f linear 2 2 2 0 0 0 Image01.ppm
@@ -68,14 +68,14 @@ In the examples pictured below, these [images](https://drive.google.com/file/d/1
 
    ![enall](img/linear.png)
 
-4. Applies 3 filters that alter the colors of the image.
+4. Applies 3 filters that alter the colors of the image
 
    ```console
    > filter -f gamma 0.7 -f linear 1 0.8 0.3 0.1 0.1 0.3 -f gamma 1.2 Image02.ppm
    ```
 
    ![enall](img/gamma-linear-gamma.png)
-   
+
 ## Contributions
 
 If you want to contribute, you can always create a pull request or open an issue.
@@ -83,5 +83,3 @@ If you want to contribute, you can always create a pull request or open an issue
 ## License
 
 [MIT](LICENSE)
-
-
